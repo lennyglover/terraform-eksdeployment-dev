@@ -43,7 +43,8 @@ if ! install_aws_component "$MODULES_DIR/tg_attachment_vpc_eks"; then return 1; 
 # Jump Box
 if ! install_aws_component "$MODULES_DIR/jumphost"; then return 1; fi
 
-exit
+# uncomment the next line to just build the networking components
+#exit
 
 # RDS MySQL
 if ! install_aws_component "$MODULES_DIR/rds_mysql"; then return 1; fi
